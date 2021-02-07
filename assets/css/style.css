@@ -92,6 +92,7 @@ hr{
 }
 
 .header.fixed{
+    padding: 10px 0;
     background-color: #eb8b8d;
     position: fixed;
     top: 0;
@@ -121,6 +122,11 @@ hr{
     text-transform: uppercase;
     font-size: 14px;
 }
+
+.nav.active{
+    display: block;
+}
+
 .nav__link{
     color: #fff;
     text-decoration: none;
@@ -171,6 +177,11 @@ transition: opacity .1s linear;
     padding: 10px 0;
     cursor: pointer;
 }
+
+.nav-toggle:focus{
+    outline: none;
+}
+
 .nav-toggle__item{
     display: block;
     width: 100%;
@@ -602,7 +613,13 @@ transform: translateY(-50%) rotate(135deg)
     padding: 0 110px;
     position: relative;
 }
+
+.reviews .slick-slider{
+    padding: 0 110px;
+}
+
 .reviews__item{
+    min-height: 210px;
     padding-left: 255px;
     position: relative;
 }
@@ -638,17 +655,25 @@ transform: translateY(-50%) rotate(135deg)
     background-color: #f38181;
     margin-right: 10px;
 }
-.reviews__btn{
+.slick-arrow{
+    cursor: pointer;
+    display: block;
     font-size: 0;
     color: transparent;
-
+    border: 0;
+    background: none;
     position: absolute;
     top: 50%;
     z-index: 1;
     transform:translateY(-50%);
 
 }
-.reviews__btn:after{
+
+.slick-arrow:focus{
+    outline: 0;
+}
+
+.slick-arrow:after{
     content: '';
 display: block;
 width: 16px;
@@ -659,11 +684,11 @@ border-left: 2px solid #ccc;
 
 
 }
-.reviews__btn--prev{
+ .slick-prev {
     left: 0;
     transform: rotate(-45deg)
 }
-.reviews__btn--next{
+ .slick-next{
     right: 0;
     transform: rotate(135deg)
 }
@@ -1166,7 +1191,7 @@ text-align: center;
 
     /* reviews */   
 
-    .services{
+    .reviews .slick-slider{
         padding: 0 60px;
     }
 
@@ -1398,10 +1423,10 @@ text-align: center;
 
 
     /* reviews */
-    .reviews{
+    .reviews .slick-slider{
         padding: 0;
     }
-    .reviews__btn{
+    .slick-arrow{
         top: 18%;
     }
     /* Logos */
