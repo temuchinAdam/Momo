@@ -1240,7 +1240,7 @@ text-align: center;
 
     /* intro */
     .intro{
-        min-height: 650px;
+        min-height: 680px;
     }
     /* section */
     .section{
@@ -1480,5 +1480,13 @@ text-align: center;
     }
     .subscribe__btn{
         width: 100%;
+    }
+}
+@media (max-width: 460px){
+    .reviews{
+        padding: 0;
+        margin: 0;
+        
+        
     }
 }
